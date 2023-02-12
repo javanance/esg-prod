@@ -6,11 +6,13 @@
 <hibernate-configuration>
   <session-factory>
 
-    <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <!-- <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
     <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521/ORCL</property>
+    <property name="hibernate.connection.url">jdbc:oracle:thin:@ARAZORDB_high?TNS_ADMIN=C:\\OCI\\Wallet_ARAZORDB</property>
     <property name="hibernate.connection.username">GESG</property>
-    <property name="hibernate.connection.password">GESG</property>
-    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+    <property name="hibernate.connection.password">Dull6078!1234</property>
+	    <property name="hibernate.connection.password">GESG</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property> -->
     
     <property name="hibernate.jdbc.batch_size">50</property>
     <property name="hibernate.order_inserts">true</property>

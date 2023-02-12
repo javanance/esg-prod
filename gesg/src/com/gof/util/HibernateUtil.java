@@ -26,19 +26,20 @@ public class HibernateUtil {
 		if(sessionFactory == null) {
 			
 			Map<String, String> settings = new HashMap<String,String>();
-			settings.put(Environment.DRIVER,  "oracle.jdbc.driver.OracleDriver");
-			settings.put(Environment.DIALECT, "org.hibernate.dialect.OracleDialect");
-			settings.put(Environment.URL,     "jdbc:oracle:thin:@localhost:1521/ORCL");			
-			settings.put(Environment.USER,    "GESG");			
-			settings.put(Environment.PASS,    "GESG");			
-			
-			
-			
 //			settings.put(Environment.DRIVER,  "oracle.jdbc.driver.OracleDriver");
 //			settings.put(Environment.DIALECT, "org.hibernate.dialect.OracleDialect");
-//			settings.put(Environment.URL,     "jdbc:oracle:thin:@ARAZORDB_high?TNS_ADMIN=D://OCI//Wallet_ARAZORDB");			
+//			settings.put(Environment.URL,     "jdbc:oracle:thin:@localhost:1521/ORCL");			
 //			settings.put(Environment.USER,    "GESG");			
-//			settings.put(Environment.PASS,    "Dull6078!1234");	
+//			settings.put(Environment.PASS,    "GESG");			
+			
+			
+			
+			settings.put(Environment.DRIVER,  "oracle.jdbc.driver.OracleDriver");
+			settings.put(Environment.DIALECT, "org.hibernate.dialect.OracleDialect");
+			settings.put(Environment.URL,     "jdbc:oracle:thin:@ARAZORDB_high?TNS_ADMIN=C://OCI//Wallet_ARAZORDB");			
+			settings.put(Environment.USER,    "GESG");			
+//			settings.put(Environment.USER,    "ARAZOR");			
+			settings.put(Environment.PASS,    "Dull6078!1234");	
 			
 			
 			log.info("getSesson Factory no Arg");			
