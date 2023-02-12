@@ -1,0 +1,25 @@
+@echo off
+set ESG_HOME=D:\eGovFrameDev-3.10.0-64bit\workspace\gesg
+set ESG_LIB=%ESG_HOME%/lib/gesg.jar
+set ESG_PROPS=%ESG_HOME%/properties/gesg.properties
+
+rem set ESG_ARG_T=2021-06-30
+set ESG_ARG_T=%1
+set ESG_ARG_J=%2
+
+echo ESG_ARG_T:%ESG_ARG_T%
+echo ESG_ARG_J:%ESG_ARG_J%
+
+REM SET COMMAND=
+
+REM set COMMAND=
+
+java -Xms4096m -Xmx8096m -jar -Dlog4j.configurationFile=file:%ESG_HOME%/src/log4j2.xml %ESG_LIB% -Dtime=%ESG_ARG_T% -Dproperties=%ESG_PROPS% -Djob=%ESG_ARG_J% -XX:-OmitStackTraceInFastThrow
+pause>nul
+
+ECHO %COMMAND%
+
+REM 백그라운드로 JAR 실행 시키기..
+@START %COMMAND%
+
+REM EXIT 0
