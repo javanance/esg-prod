@@ -10,7 +10,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface ToCsvMethod {
 	public boolean isPk();
-//	public boolean isCfPk();
+	public boolean isCfPk();
+	
 	public int order();
 	
 }
